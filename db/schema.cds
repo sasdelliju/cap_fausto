@@ -32,3 +32,13 @@ entity Authors {
         books       : Association to many Books
                           on books.author = $self;
 }
+
+entity Orders {
+    items : Composition of  many OrderItems
+                on items.order = $self;
+}
+
+entity OrderItems {
+    key order : Association to Orders;
+    key pos : Integer
+}
