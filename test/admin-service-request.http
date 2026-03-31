@@ -3,10 +3,6 @@
 @baseUrl = http://localhost:4004
 
 
-### ------------------------------------------------------------------------
-# Get Service Document
-GET {{baseUrl}}/admin
-
 
 ### ------------------------------------------------------------------------
 # Get Service Metadata Document
@@ -39,7 +35,7 @@ Content-Type: application/json
 
 @authorID = {{createNewAuthor.response.body.$.ID}}
 
-PATCH  {{baseUrl}}/admin/Authors({{authorID}})
+PATCH {{baseUrl}}/admin/Authors({{authorID}})
 Content-Type: application/json
 
 {
